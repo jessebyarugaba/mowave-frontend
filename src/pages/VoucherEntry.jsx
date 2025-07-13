@@ -10,7 +10,7 @@ const VoucherEntry = () => {
     const validate = async () => {
         setLoading(true);
         try {
-            await axios.post('http://localhost:8082/voucher/validate', { code });
+            await axios.post('https://exclusive-madlin-phino-6d7723ae.koyeb.app/voucher/validate', { code });
             alert("Voucher validated successfully!");
         } catch (e) {
             alert(e.response?.data?.message || 'Error validating voucher');
@@ -23,7 +23,7 @@ const VoucherEntry = () => {
 
         setLoading(true);
         try {
-            await axios.post('http://localhost:8082/voucher/purchase', { amount, phone });
+            await axios.post('https://exclusive-madlin-phino-6d7723ae.koyeb.app/voucher/purchase', { amount, phone });
             alert("Payment request sent! Complete it on your phone.");
         } catch (e) {
             alert(e.response?.data?.message || 'Error initiating purchase');

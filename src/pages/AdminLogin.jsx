@@ -13,7 +13,7 @@ const AdminLogin = ({ setToken }) => {
 
         setLoading(true);
         try {
-            const res = await axios.post('http://localhost:8082/auth/login', { username, password });
+            const res = await axios.post('https://exclusive-madlin-phino-6d7723ae.koyeb.app/auth/login', { username, password });
             localStorage.setItem('adminToken', res.data.token);
             setToken(res.data.token);
             navigate('/dashboard');

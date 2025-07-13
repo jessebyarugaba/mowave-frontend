@@ -17,16 +17,16 @@ const AdminDashboard = ({ token }) => {
 
         const fetchData = async () => {
             const headers = { Authorization: `Bearer ${token}` };
-            const statsRes = await axios.get('http://localhost:8082/admin/stats', { headers });
+            const statsRes = await axios.get('https://exclusive-madlin-phino-6d7723ae.koyeb.app/admin/stats', { headers });
             setStats(statsRes.data);
 
-            const paymentsRes = await axios.get('http://localhost:8082/admin/payments', { headers });
+            const paymentsRes = await axios.get('https://exclusive-madlin-phino-6d7723ae.koyeb.app/admin/payments', { headers });
             setPayments(paymentsRes.data);
 
-            const vouchersRes = await axios.get('http://localhost:8082/admin/vouchers', { headers });
+            const vouchersRes = await axios.get('https://exclusive-madlin-phino-6d7723ae.koyeb.app/admin/vouchers', { headers });
             setVouchers(vouchersRes.data);
 
-            const logsRes = await axios.get('http://localhost:8082/admin/logs', { headers });
+            const logsRes = await axios.get('https://exclusive-madlin-phino-6d7723ae.koyeb.app/admin/logs', { headers });
             setLogs(logsRes.data);
         };
 
