@@ -25,6 +25,7 @@ const VoucherEntry = () => {
         try {
             await axios.post('https://exclusive-madlin-phino-6d7723ae.koyeb.app/voucher/purchase', { amount, phone });
             alert("Payment request sent! Complete it on your phone.");
+            window.location.reload();
         } catch (e) {
             alert(e.response?.data?.message || 'Error initiating purchase');
         }
